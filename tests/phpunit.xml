@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../vendor/phpunit/phpunit/phpunit.xsd" bootstrap="../vendor/autoload.php" colors="true">
+  <testsuites>
+    <testsuite name="unit-tests">
+      <!-- First execute storage -->
+      <directory>./src/unit/Storage</directory>
+      <!-- Second execute remaining -->
+      <directory>./src/unit</directory>
+    </testsuite>
+  </testsuites>
+
+  <php>
+    <!-- Captcha configuration -->
+    <const name="TEST_FR_CAPTCHA_BASE_PATH" value="C:\xampp7.2.11\htdocs\artifacts\faisalrehmanid-fr-captcha" />
+    <const name="TEST_FR_CAPTCHA_IMAGE_BASE_PATH" value="C:\xampp7.2.11\htdocs\artifacts\faisalrehmanid-fr-captcha\captcha-images" />
+    <const name="TEST_FR_CAPTCHA_IMAGE_BASE_URL" value="http://localhost/artifacts/faisalrehmanid-fr-captcha/captcha-images" />
+
+    <!-- Values must from: Oracle, MySQL -->
+    <const name="TEST_FR_CAPTCHA_STORAGE" value="MySQL" />
+
+    <!-- MySQL storage constants -->
+    <const name="TEST_FR_CAPTCHA_STORAGE_MYSQL" value="true" />
+    <const name="TEST_FR_CAPTCHA_STORAGE_MYSQL_DRIVER" value="pdo_mysql" />
+    <const name="TEST_FR_CAPTCHA_STORAGE_MYSQL_HOSTNAME" value="localhost" />
+    <const name="TEST_FR_CAPTCHA_STORAGE_MYSQL_PORT" value="3306" />
+    <const name="TEST_FR_CAPTCHA_STORAGE_MYSQL_USERNAME" value="root" />
+    <const name="TEST_FR_CAPTCHA_STORAGE_MYSQL_PASSWORD" value="" />
+    <const name="TEST_FR_CAPTCHA_STORAGE_MYSQL_DATABASE" value="test_fr_db_mysql" />
+    <const name="TEST_FR_CAPTCHA_STORAGE_MYSQL_CHARSET" value="utf8mb4" />
+    <const name="TEST_FR_CAPTCHA_STORAGE_MYSQL_CAPTCHA_TABLE_NAME" value="test_fr_db_mysql.captchas" />
+
+    <!-- Oracle storage constants -->
+    <const name="TEST_FR_CAPTCHA_STORAGE_ORACLE" value="false" />
+    <const name="TEST_FR_CAPTCHA_STORAGE_ORACLE_DRIVER" value="oci8" />
+    <const name="TEST_FR_CAPTCHA_STORAGE_ORACLE_CONNECTION" value="ERPDEVDB" />
+    <const name="TEST_FR_CAPTCHA_STORAGE_ORACLE_USERNAME" value="GAMES" />
+    <const name="TEST_FR_CAPTCHA_STORAGE_ORACLE_PASSWORD" value="GAMES" />
+    <const name="TEST_FR_CAPTCHA_STORAGE_ORACLE_CHARACTER_SET" value="AL32UTF8" />
+    <const name="TEST_FR_CAPTCHA_STORAGE_ORACLE_CAPTCHA_TABLE_NAME" value="GAMES.CAPTCHAS" />
+  </php>
+</phpunit>

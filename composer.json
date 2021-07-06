@@ -1,0 +1,35 @@
+{
+  "name": "faisalrehmanid/fr-captcha",
+  "description": "This library provide CAPTCHA implementation",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Faisal Rehman",
+      "email": "faisalrehmanid@hotmail.com"
+    }
+  ],
+  "keywords": [
+    "Captcha"
+  ],
+  "autoload": {
+    "psr-4": {
+      "FR\\Captcha\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "files": [
+      "tests/Bootstrap.php"
+    ],
+    "psr-4": {
+      "FRUnitTest\\Captcha\\": "tests/src/unit"
+    }
+  },
+  "require": {
+	"php": ">=5.4.0",
+    "faisalrehmanid/fr-service-response": ">=1.0",
+    "faisalrehmanid/fr-db": ">=1.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "8"
+  }
+}
